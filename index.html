@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity Traders & Suppliers</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+
+</head>
+
+<body class="bg-[#F4F1EC] font-sans">
+
+<!-- NAVBAR -->
+<nav class="flex justify-between items-center p-6 bg-white shadow">
+
+  <div class="flex items-center gap-3">
+    <!-- ✅ LOGO ADDED -->
+    <img src="U_20260419_120931_0000.png" class="w-10 h-10 object-contain rounded-lg">
+    <h1 class="font-bold text-xl text-[#1B3A2D]">Unity Traders</h1>
+  </div>
+
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="p-10">
+
+<div class="max-w-2xl mx-auto">
+
+<h2 class="text-3xl font-bold mb-6 text-[#1B3A2D]">Contact Us</h2>
+
+<!-- ✅ FORM FULLY INTEGRATED -->
+<form id="contact-form"
+      action="https://formspree.io/f/mrerdove"
+      method="POST"
+      class="bg-white p-6 rounded-xl shadow space-y-4">
+
+  <div class="grid grid-cols-2 gap-4">
+    <input name="first_name" placeholder="First Name" class="p-3 border rounded">
+    <input name="last_name" placeholder="Last Name" class="p-3 border rounded">
+  </div>
+
+  <input name="email" type="email" placeholder="Email" class="w-full p-3 border rounded">
+
+  <!-- ✅ UPDATED SERVICES -->
+  <select name="service" class="w-full p-3 border rounded">
+    <option value="">Select Service</option>
+    <option>Retail</option>
+    <option>Wholesale</option>
+    <option>Custom</option>
+  </select>
+
+  <textarea name="message" placeholder="Message" rows="4" class="w-full p-3 border rounded"></textarea>
+
+  <button type="submit" class="w-full bg-[#C8572A] text-white py-3 rounded font-bold">
+    Send Message
+  </button>
+
+  <!-- SUCCESS MESSAGE -->
+  <div id="form-success" class="hidden text-green-600 text-center font-bold">
+    ✓ Message sent successfully!
+  </div>
+
+</form>
+
+</div>
+</section>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function() {
+  document.getElementById('form-success').classList.remove('hidden');
+});
+</script>
+
+</body>
+</html>
